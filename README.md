@@ -14,7 +14,11 @@ This will install the package and its dependencies, making the `diagrams_aws` co
 
 ## Usage
 
-After installation, you can generate a diagram by running:
+After installation, dump your terraform to a json
+```
+terraform show -json > terraform_state.json
+```
+Generate a diagram by running:
 
 ```bash
 diagrams_aws --input <path_to_your_terraform_state_json> --output <output_filename_without_extension>
